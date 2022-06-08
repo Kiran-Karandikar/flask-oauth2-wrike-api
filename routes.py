@@ -8,7 +8,7 @@
 # -N/A
 
 # Project Modules
-from views import *
+from oauth_views import *
 
 
 # Global Vars

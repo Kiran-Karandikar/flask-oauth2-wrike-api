@@ -1,0 +1,13 @@
+# .env File
+client_id=<<<sample client id>>>
+client_secret=<<sample client_secret>>
+base=https://login.wrike.com
+host=https://www.wrike.com
+application_host=http://localhost
+authorization_base_url=${base}/oauth2/authorize/v4
+token_url=${base}/oauth2/token
+refresh_url=${base}/oauth2/token
+redirect_uri=${application_host}/callback
+profile_url=${host}/api/v4/contacts?me=true
+test_url=${host}/api/v4/tasks
+permanent_token=<<<Permanent token if any>>>
