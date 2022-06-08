@@ -11,7 +11,10 @@ from flask_cors import cross_origin
 from requests_oauthlib import OAuth2Session
 
 # Project Modules
-from config import *
+from config import (
+    authorization_base_url, client_id, client_secret, permanent_token,
+    profile_url, redirect_uri, refresh_url, test_url, token_url,
+)
 
 
 # Global Vars

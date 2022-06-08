@@ -8,7 +8,10 @@
 # -N/A
 
 # Project Modules
-from oauth_views import *
+from oauth_views import (
+    authorization, automatic_refresh, callback, manual_refresh,
+    profile_details, profile_details_with_permanent_token, task_details,
+)
 
 
 # Global Vars
