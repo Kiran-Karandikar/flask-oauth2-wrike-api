@@ -1,8 +1,9 @@
 # flask-oauth2-wrike-api
 
 - [ ] localhost callback resolution
-- [ ] remove .wrike-env details
+- [ ] call to action; "update the env details"
 - [ ] credits to `requests-oauthlib`
+-
 
 ```shell
 set FLASK_APP=main.py 
