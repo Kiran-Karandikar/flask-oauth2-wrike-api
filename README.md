@@ -1,13 +1,68 @@
-# flask-oauth2-wrike-api
+# Flask Oauth2.0 | Wrike
 
-- [ ] localhost callback resolution
-- [ ] call to action; "update the env details"
-- [ ] credits to `requests-oauthlib`
--
+This is a sample Flask app to authenticate with [Wrike](http://wrike.com) as
+a third-party OAuth2 provider.
 
-```shell
-set FLASK_APP=main.py 
-set FLASK_ENV=development
-set FLASK_CONF=DEV 
-flask run
-```
+## Dependencies
+
+This app uses the following Python packages
+
++ [python-dotenv](https://pypi.org/project/python-dotenv/), to store sensitive
+  information
++ [requests-oauthlib](https://github.com/requests/requests-oauthlib), to
+  integrate with
+  third-party OAuth2 providers, such as Wrike
++ [requests](https://github.com/psf/requests), to send HTTP GET and POST
+  requests
+
+Other requirements include:
+
++ a Wrike account to login
++ a Wrike [OAuth](https://developers.wrike.com/oauth-20-authorization/)
+  developer account to
+  generic credentials such as `client id` and `client secret`.
++ an SSL connection to implement a client callback with a URL endpoint that
+  receives communication back from Wrike's OAuth service.
+
+## Why I wrote this app?
+
++ I wanted to understand and learn how to integrate with a third-party OAuth2
+  provider by writing some code myself.
+
++ With _requests-oauthlib_, I am able to write a client service that completes
+  the [OAuth2 flow](https://oauthlib.readthedocs.io/en/latest/oauth2/clients/webapplicationclient.html)
+  between the client and provider, which requires these steps:
+	
+	- request authorization from Wrike at
+	  an [authorized Wrike URL](https://login.wrike.com/oauth2/authorize/v4)
+	  with `client id` and `state` information and expecting a `code` back
+	- receive a `code` back from GitHub with the prior `state` information at
+	  the
+	  client's [callback URL](http://example.com/callback)
+	- fetch a token from
+	  Wrike's [token URL](https://login.wrike.com/oauth2/token)
+	  passing `client secret` and `code` as arguments
+	- retrieve the authorized user profile data
+	  from [Wrike](https://www.wrike.com/api/v4/contacts?me=true) as `JSON` data
+
+To learn more about Wrike's OAuth2 flow, refer to
+this [doc](https://developers.wrike.com/oauth-20-authorization/).
+
+### Usage
+
+- Add `client_id`, `client_secret` details in `env\.wrike-env`
+	- Add `permanent_token` details if created.
+	- On command line:
+	  ```shell
+	  set FLASK_APP=main.py 
+	  set FLASK_ENV=development
+	  set FLASK_CONF=DEV 
+	  flask run
+	  ```
+- For local development setup, the callback uri points to
+  localhost. `${application_host}` in `env\.wrike-env`
+	- While testing, after step 1. Authorization, change the localhost in
+	  browser
+	  window to `127.0.0.1:5000/callback?code=` and code obtained in step 1.
+		- This allows redirection to localhost on specific port and endpoint.
+
