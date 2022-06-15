@@ -1,3 +1,10 @@
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
 # Flask Oauth2.0 | Wrike
 
 This is a sample Flask app to authenticate with [Wrike](http://wrike.com) as
@@ -65,4 +72,28 @@ this [doc](https://developers.wrike.com/oauth-20-authorization/).
 	  browser
 	  window to `127.0.0.1:5000/callback?code=` and code obtained in step 1.
 		- This allows redirection to localhost on specific port and endpoint.
+
+[contributors-shield]: https://img.shields.io/github/contributors/kiran-karandikar/flask-oauth2-wrike-api?style=for-the-badge
+
+[contributors-url]: https://github.com/Kiran-Karandikar/flask-oauth2-wrike-api/graphs/contributors
+
+[forks-shield]: https://img.shields.io/github/forks/Kiran-Karandikar/flask-oauth2-wrike-api?style=for-the-badge
+
+[forks-url]: https://github.com/Kiran-Karandikar/flask-oauth2-wrike-api/network
+
+[stars-shield]: https://img.shields.io/github/stars/Kiran-Karandikar/flask-oauth2-wrike-api?style=for-the-badge
+
+[stars-url]: https://github.com/Kiran-Karandikar/flask-oauth2-wrike-api/stargazers
+
+[issues-shield]: https://img.shields.io/github/issues/Kiran-Karandikar/flask-oauth2-wrike-api?style=for-the-badge
+
+[issues-url]: https://github.com/Kiran-Karandikar/flask-oauth2-wrike-api/issues
+
+[license-shield]: https://img.shields.io/github/license/Kiran-Karandikar/flask-oauth2-wrike-api?style=for-the-badge
+
+[license-url]: https://github.com/Kiran-Karandikar/flask-oauth2-wrike-api/blob/master/LICENSE
+
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+
+[linkedin-url]: https://linkedin.com/in/kiran-karandikar
 
