@@ -55,6 +55,7 @@
 </div>
 
 <!-- BADGES.MD Finish -->
+<!-- BADGES.MD Finish -->
 # Flask Oauth2.0 | Wrike
 
 This is a sample Flask app to authenticate with [Wrike](http://wrike.com) as
@@ -122,6 +123,7 @@ this [doc](https://developers.wrike.com/oauth-20-authorization/).
 	  browser
 	  window to `127.0.0.1:5000/callback?code=` and code obtained in step 1.
 		- This allows redirection to localhost on specific port and endpoint.
+
 
 
 
