@@ -129,6 +129,7 @@ this [doc](https://developers.wrike.com/oauth-20-authorization/).
 
 
 
+
 ### Other projects
 
 Check out the other stuff I've worked upon.
@@ -149,4 +150,4 @@ Check out the other stuff I've worked upon.
 <!-- CONTACT -->
 ## Contact
 
-- [Kiran Karandikar: khkarandikar at gmail dot com](mailto:khkarandikar@gmail.com)
+- [Kiran Karandikar:](mailto:connect.funnel.github@kirankarandikar.com)
